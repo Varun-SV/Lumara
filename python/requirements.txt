@@ -1,0 +1,27 @@
+# Lumara Python sidecar dependencies
+# Install with: pip install -r requirements.txt
+
+# Web server
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+
+# Image processing
+Pillow==10.3.0
+rawpy==0.21.0
+opencv-python-headless==4.9.0.80
+scikit-image==0.23.1
+numpy==1.26.4
+
+# AI / diffusers (optional — required for inpainting/outpainting/style-transfer)
+# Uncomment if you have a compatible GPU or MPS device:
+# torch==2.3.0
+# diffusers==0.27.2
+# transformers==4.40.0
+# accelerate==0.30.0
+
+# HTTP client (for LLM communication)
+httpx==0.27.0
+
+# Utilities
+python-multipart==0.0.9
+pydantic==2.7.0

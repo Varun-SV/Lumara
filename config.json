@@ -1,0 +1,21 @@
+{
+  "_comment": "Lumara runtime configuration. Copy to config.local.json for local overrides (git-ignored).",
+  "sidecar": {
+    "host": "127.0.0.1",
+    "port": 7842,
+    "timeout_ms": 60000
+  },
+  "llm": {
+    "backend": "ollama",
+    "host": "127.0.0.1",
+    "port": 11434,
+    "model": "llava:latest",
+    "timeout_s": 30,
+    "max_tokens": 2048
+  },
+  "editing": {
+    "batch_adjustment_tolerance": 0.15,
+    "default_export_quality": 92,
+    "default_export_format": "jpeg"
+  }
+}

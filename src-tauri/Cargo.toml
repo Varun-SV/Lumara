@@ -1,0 +1,42 @@
+[package]
+name = "lumara"
+version = "0.1.0"
+description = "Local AI photo editor — Lumara"
+authors = ["Lumara"]
+license = "MIT"
+repository = ""
+edition = "2021"
+rust-version = "1.70"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "1.5", features = [] }
+
+[dependencies]
+tauri = { version = "1.6", features = [
+  "dialog-open",
+  "dialog-save",
+  "fs-read-file",
+  "fs-write-file",
+  "fs-exists",
+  "http-request",
+  "shell-open",
+  "window-close",
+  "window-minimize",
+  "window-maximize",
+] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+tokio = { version = "1", features = ["full"] }
+base64 = "0.21"
+uuid = { version = "1.6", features = ["v4"] }
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.10"
+
+[features]
+# This feature is used for production builds or when `devPath` points to the filesystem
+# DO NOT REMOVE!!
+custom-protocol = ["tauri/custom-protocol"]
